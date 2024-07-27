@@ -37,9 +37,15 @@ export const EXPERIENCES = [
     technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
   },
 ];
-{/* https://aalgharib.github.io/aalgharibmt.github.io/ */}
-              {/* https://my-portfolio-w6m8.onrender.com/ */}
-              {/* https://windsorrenovationtoperfection.wordpress.com/ */}
+{
+  /* https://aalgharib.github.io/aalgharibmt.github.io/ */
+}
+{
+  /* https://my-portfolio-w6m8.onrender.com/ */
+}
+{
+  /* https://windsorrenovationtoperfection.wordpress.com/ */
+}
 export const PROJECTS = [
   {
     title: "E-Commerce Website",
@@ -47,7 +53,7 @@ export const PROJECTS = [
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    link: "https://windsorrenovationtoperfection.wordpress.com/",
+    link: "https://ali-al-gharibawi-portfolio.vercel.app/",
   },
   {
     title: "Task Management App",
