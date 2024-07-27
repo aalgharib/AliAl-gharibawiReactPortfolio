@@ -22,7 +22,11 @@ const Projects = () => {
               className="w-full lg:w-1/4"
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <img
+                <motion.img
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 1.1 }}
+                  drag="x"
+                  dragConstraints={{ left: -100, right: 100 }}
                   src={project.image}
                   width={150}
                   height={150}
