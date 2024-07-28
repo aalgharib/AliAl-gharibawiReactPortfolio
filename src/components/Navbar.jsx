@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 // import About from "./About";
 // import Technologies from "./components/Technologies";
 // import Experience from "./components/Experience";
@@ -28,7 +28,15 @@ const Navbar = () => {
         <ul>
           <li>
             <a href="https://ali-al-gharibawi-portfolio.vercel.app/">
-              <img className="mx-4 w-40" src={logo} alt="logo" />
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 1.1 }}
+                drag="x"
+                dragConstraints={{ left: -100, right: 100 }}
+                className="mx-4 w-40"
+                src={logo}
+                alt="logo"
+              />
             </a>
           </li>
           {/* <li>
@@ -59,18 +67,39 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-        <a href="https://www.linkedin.com/in/ali-al-gharibawi-ai-developer">
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 1.1 }}
+          drag="x"
+          dragConstraints={{ left: -100, right: 100 }}
+          href="https://www.linkedin.com/in/ali-al-gharibawi-ai-developer"
+        >
           <FaLinkedin />
-        </a>
-        <a href="https://github.com/aalgharib">
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 1.1 }}
+          drag="x"
+          dragConstraints={{ left: -100, right: 100 }}
+          href="https://github.com/aalgharib">
           <FaGithub />
-        </a>
-        <a href="https://www.facebook.com/ali.algharibawi.3/">
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 1.1 }}
+          drag="x"
+          dragConstraints={{ left: -100, right: 100 }}
+          href="https://www.facebook.com/ali.algharibawi.3/">
           <FaFacebook />
-        </a>
-        <a href="https://www.instagram.com/baquralgharib/">
+        </motion.a>
+        <motion.a 
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 1.1 }}
+          drag="x"
+          dragConstraints={{ left: -100, right: 100 }}
+          href="https://www.instagram.com/baquralgharib/">
           <FaInstagram />
-        </a>
+        </motion.a>
       </div>
     </nav>
   );

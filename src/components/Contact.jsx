@@ -1,4 +1,4 @@
-import { CONTACT } from "../constants"
+import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 const Contact = () => {
   return (
@@ -28,14 +28,20 @@ const Contact = () => {
         >
           {CONTACT.phoneNo}
         </motion.p>
-        
-        <a href={`mailto:${CONTACT.email}`} 
-        className=" border-b">
+
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 1.1 }}
+          drag="x"
+          dragConstraints={{ left: -100, right: 100 }}
+          href={`mailto:${CONTACT.email}`}
+          className=" border-b"
+        >
           {CONTACT.email}
-        </a>
+        </motion.a>
       </div>
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;
