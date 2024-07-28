@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex flex-shrink-0 items-center">
         <ul>
           <li>
-            <a href="<Hero />">
+            <a href="https://ali-al-gharibawi-portfolio.vercel.app/">
               <img className="mx-4 w-40" src={logo} alt="logo" />
             </a>
           </li>

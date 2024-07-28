@@ -1,4 +1,3 @@
-
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 const Projects = () => {
@@ -61,6 +60,6 @@ const Projects = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Projects
+export default Projects;
