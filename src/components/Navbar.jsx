@@ -23,7 +23,7 @@ import { motion } from "framer-motion";
 // <Contact />
 const Navbar = () => {
   return (
-    <nav className=" mb-20 flex items-center justify-between py-6">
+    <nav className=" mb-20 flex items-center justify-between py-6 ">
       <div className="flex flex-shrink-0 items-center">
         <ul>
           <li>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 whileTap={{ scale: 1.1 }}
                 drag="x"
                 dragConstraints={{ left: -100, right: 100 }}
-                className="mx-4 w-40"
+                className="mx-0 sm:mx-0 w-40"
                 src={logo}
                 alt="logo"
               />
@@ -66,7 +66,7 @@ const Navbar = () => {
           </li> */}
         </ul>
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+      <div className="m-8 flex items-center justify-center sm:justify-start gap-4 text-2xl mx-1">
         <motion.a
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.1 }}
@@ -81,7 +81,8 @@ const Navbar = () => {
           whileTap={{ scale: 1.1 }}
           drag="x"
           dragConstraints={{ left: -100, right: 100 }}
-          href="https://github.com/aalgharib">
+          href="https://github.com/aalgharib"
+        >
           <FaGithub />
         </motion.a>
         <motion.a
@@ -89,15 +90,17 @@ const Navbar = () => {
           whileTap={{ scale: 1.1 }}
           drag="x"
           dragConstraints={{ left: -100, right: 100 }}
-          href="https://www.facebook.com/ali.algharibawi.3/">
+          href="https://www.facebook.com/ali.algharibawi.3/"
+        >
           <FaFacebook />
         </motion.a>
-        <motion.a 
+        <motion.a
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.1 }}
           drag="x"
           dragConstraints={{ left: -100, right: 100 }}
-          href="https://www.instagram.com/baquralgharib/">
+          href="https://www.instagram.com/baquralgharib/"
+        >
           <FaInstagram />
         </motion.a>
       </div>
