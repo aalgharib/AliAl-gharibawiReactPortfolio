@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex flex-shrink-0 items-center">
         <ul>
           <li>
-            <a href="https://alialgharibawi.vercel.app/">
+            <a href="https://aligharib.vercel.app/">
               <motion.img
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 1.1 }}
@@ -72,7 +72,7 @@ const Navbar = () => {
           whileTap={{ scale: 1.1 }}
           drag="x"
           dragConstraints={{ left: -100, right: 100 }}
-          href="https://www.linkedin.com/in/ali-al-gharibawi-ai-developer"
+          href="https://www.linkedin.com/in/ali-gharib-ai-developer"
         >
           <FaLinkedin />
         </motion.a>

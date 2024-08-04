@@ -53,7 +53,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and experience. Includes sections for projects, about me, and contact information.",
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    link: "https://alialgharibawi.vercel.app/",
+    link: "https://aligharib.vercel.app/",
   },
   {
     title: "Construction Company Website",
