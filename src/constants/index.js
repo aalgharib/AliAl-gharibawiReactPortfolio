@@ -82,7 +82,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "1303-605 Proudfoot Lane, London, ON N6H 4S2 ",
+  address: " London, ON ",
   phoneNo: "+1 519 991 4046 ",
   email: "aalgharibawi@gmail.com",
 };
