@@ -11,7 +11,7 @@ export const EXPERIENCES = [
   {
     year: "2024 - Present",
     role: "Full Stack Developer",
-    company: "Centennial College",
+    company: "Al-Mahdi Centre",
     description: `Led a team in developing and maintaining web application using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
     technologies: ["Javascript", "React.js", "Node.js", "mongoDB"],
   },
@@ -53,7 +53,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and experience. Includes sections for projects, about me, and contact information.",
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    link: "https://aliaidev.vercel.app/",
+    link: "https://alialgharibawi.vercel.app/",
   },
   {
     title: "Construction Company Website",
