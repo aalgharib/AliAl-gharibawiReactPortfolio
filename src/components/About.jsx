@@ -1,6 +1,6 @@
 import { ABOUT_TEXT } from "../constants";
 import aboutMeImageT from "../assets/aboutMeImageT.png";
-import myResume from "../assets/SEP23_RESUME.pdf";
+import myResume from "../assets/AliAlgharibawi_Resume.pdf";
 import { motion } from "framer-motion";
 const About = () => {
   return (
