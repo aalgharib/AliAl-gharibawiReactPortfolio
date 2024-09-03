@@ -1,5 +1,6 @@
 import { ABOUT_TEXT } from "../constants";
 import aboutMeImageT from "../assets/aboutMeImageT.png";
+import myResume from "../assets/SEP23_RESUME.pdf";
 import { motion } from "framer-motion";
 const About = () => {
   return (
@@ -26,10 +27,26 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="w-full lg:w-1/2"
         >
-          <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6 font-light tracking-tighter">
+          <div className=" justify-center lg:justify-start">
+            <p className="mb-4 my-2 max-w-xl py-6 font-light tracking-tighter">
               {ABOUT_TEXT}
+              {"  "}
             </p>
+            <motion.p
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 1.1 }}
+              drag="x"
+              dragConstraints={{ left: -100, right: 100 }}
+              className="mr-2 mt-4 rounded bg-neutral-900 w-20 px-2 py-1 
+                    text-sm font-medium text-purple-700"
+            >
+              <a
+                href={myResume}
+                download="SEP23_RESUME.pdf"
+              >
+                Download Resume
+              </a>
+            </motion.p>
           </div>
         </motion.div>
       </div>
