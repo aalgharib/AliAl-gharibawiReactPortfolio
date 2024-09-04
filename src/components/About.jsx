@@ -40,10 +40,7 @@ const About = () => {
               className="mr-2 mt-4 rounded bg-neutral-900 w-20 px-2 py-1 
                     text-sm font-medium text-purple-700"
             >
-              <a
-                href={myResume}
-                download="SEP23_RESUME.pdf"
-              >
+              <a href={myResume} download="AliAlgharibawi_Resume.pdf">
                 Download Resume
               </a>
             </motion.p>

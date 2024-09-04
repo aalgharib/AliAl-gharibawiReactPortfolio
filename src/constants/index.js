@@ -13,17 +13,17 @@ export const ABOUT_TEXT = `I am a dedicated and versatile software developer wit
 export const EXPERIENCES = [
   {
     year: "2024 - Present",
-    role: "Full Stack Developer",
+    role: "Website Administrator",
     company: "Al-Mahdi Centre",
-    description: `Led a team in developing and maintaining web application using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Node.js", "mongoDB"],
+    description: `Managed domain hosting and previous website migration. Oversaw content assistants and provided technical support. Developed software and designed website elements as needed. Created documentation on website processes and procedures. Collaborated with stakeholders to define project requirements and timelines. Provided technical support and documentation to end-users.`,
+    technologies: ["Javascript", "React.js", "Node.js", "WordPress"],
   },
   {
     year: "2023 - 2024",
     role: "Full Stack Developer",
     company: "Windsor Renovation to Perfection",
     description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    technologies: ["WordPress", "PHP", "Next.js", "MySQL"],
   },
   // {
   //   year: "2022 - 2023",
