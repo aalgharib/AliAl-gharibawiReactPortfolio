@@ -72,7 +72,8 @@ const Navbar = () => {
           whileTap={{ scale: 1.1 }}
           drag="x"
           dragConstraints={{ left: -100, right: 100 }}
-          href="https://www.linkedin.com/in/ali-algharibawi">
+          href="https://www.linkedin.com/in/ali-algharibawi"
+        >
           <FaLinkedin />
         </motion.a>
         <motion.a
