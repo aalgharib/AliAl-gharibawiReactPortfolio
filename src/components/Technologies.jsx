@@ -1,88 +1,69 @@
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-// import { FaPython } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { TbBrandCSharp } from "react-icons/tb";
+import { SiMongodb, SiFlask, SiPostgresql, SiTypescript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { FaNodeJs, FaPython } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { SiFlask } from "react-icons/si";
-const iconVariants = (duration) => ({
-  initial: {y: -10},
+
+const TECHS = [
+  { icon: <RiReactjsLine className="text-5xl text-cyan-400" />, name: "React", delay: 2.5 },
+  { icon: <FaPython className="text-5xl text-yellow-400" />, name: "Python", delay: 3 },
+  { icon: <FaNodeJs className="text-5xl text-green-500" />, name: "Node.js", delay: 2 },
+  { icon: <SiNextdotjs className="text-5xl text-white" />, name: "Next.js", delay: 3.5 },
+  { icon: <SiTypescript className="text-5xl text-blue-400" />, name: "TypeScript", delay: 4 },
+  { icon: <SiTailwindcss className="text-5xl text-cyan-400" />, name: "Tailwind", delay: 2.8 },
+  { icon: <SiFlask className="text-5xl text-neutral-300" />, name: "Flask", delay: 5 },
+  { icon: <SiMongodb className="text-5xl text-green-500" />, name: "MongoDB", delay: 3.2 },
+  { icon: <SiPostgresql className="text-5xl text-blue-300" />, name: "PostgreSQL", delay: 4.5 },
+];
+
+const float = (duration) => ({
+  initial: { y: -8 },
   animate: {
-    y:[10,-10],
-    transition: {
-      duration: duration,
-      ease: "linear", 
-      repeat:Infinity, 
-      repeatType:"reverse", 
-    }, 
+    y: [8, -8],
+    transition: { duration, ease: "linear", repeat: Infinity, repeatType: "reverse" },
   },
-});  
+});
+
 const Technologies = () => {
   return (
-    <div className=" border-b border-neutral-800 pb-24">
+    <section id="technologies" className="border-b border-neutral-800 pb-24">
       <motion.h2
-      whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -100 }}
-          transition={{ duration: 1.5 }}
-      className="my-20 text-center text-4xl">Technologies</motion.h2>
-      <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1.5 }}
-           className="flex flex-wrap items-center justify-center gap-4">
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className=" rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <RiReactjsLine className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className=" rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiMongodb className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(5)}
-          initial="initial"
-          animate="animate"
-          className=" rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiFlask className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className=" rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          {/* <FaJava className="text-7xl" style={{ color: "#5382A1" }} /> */}
-          <FaJava className="text-7xl" style={{ color: "#E76F00" }} />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(6)}
-          initial="initial"
-          animate="animate"
-          className=" rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaNodeJs className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4)}
-          initial="initial"
-          animate="animate"
-          className=" rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <TbBrandCSharp className="text-7xl " />
-        </motion.div>
-      </motion.div>
-    </div>
-  );
-}
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -40 }}
+        transition={{ duration: 0.5 }}
+        className="my-20 text-center text-4xl font-bold text-white"
+      >
+        Tech <span className="text-blue-500">Stack</span>
+      </motion.h2>
 
-export default Technologies
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -60 }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-wrap items-end justify-center gap-6"
+      >
+        {TECHS.map(({ icon, name, delay }) => (
+          <motion.div
+            key={name}
+            variants={float(delay)}
+            initial="initial"
+            animate="animate"
+            className="flex flex-col items-center gap-3 group"
+          >
+            <div
+              className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-5
+                         group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]
+                         transition-all duration-300"
+            >
+              {icon}
+            </div>
+            <span className="text-xs font-medium text-neutral-500 group-hover:text-neutral-300 transition-colors duration-200">
+              {name}
+            </span>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+};
+
+export default Technologies;

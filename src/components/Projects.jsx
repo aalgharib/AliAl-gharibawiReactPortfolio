@@ -1,64 +1,103 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+import { FaGithub, FaGlobe, FaPlay, FaRocket } from "react-icons/fa";
+
+const TYPE_ICONS = {
+  video: <FaPlay className="text-4xl text-blue-400/60" />,
+  platform: <FaRocket className="text-4xl text-blue-400/60" />,
+  github: <FaGithub className="text-4xl text-blue-400/60" />,
+  website: <FaGlobe className="text-4xl text-blue-400/60" />,
+};
+
+const getLinkLabel = (type) => {
+  if (type === "video") return "Watch Demo";
+  if (type === "github") return "View on GitHub";
+  return "Visit Project";
+};
+
 const Projects = () => {
   return (
-    <div className=" border-b border-neutral-900 pb-4">
+    <section id="projects" className="border-b border-neutral-800 pb-24">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -40 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
+        className="my-20 text-center text-4xl font-bold text-white"
       >
-        Projects
+        Featured <span className="text-blue-500">Projects</span>
       </motion.h2>
-      <div>
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((project, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
-            >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <motion.img
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 1.1 }}
-                  drag="x"
-                  dragConstraints={{ left: -100, right: 100 }}
+          <motion.div
+            key={index}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            className="group flex flex-col rounded-2xl border border-neutral-800 bg-neutral-900/40 overflow-hidden
+                       hover:border-blue-500/40 hover:shadow-[0_0_40px_-10px_rgba(37,99,235,0.3)]
+                       transition-all duration-300"
+          >
+            {/* Thumbnail */}
+            <div className="relative h-48 overflow-hidden bg-neutral-950">
+              {project.image ? (
+                <img
                   src={project.image}
-                  width={150}
-                  height={150}
                   alt={project.title}
-                  className="mb-8 rounded"
+                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-              </a>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
-              {project.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 
-                    text-sm font-medium text-purple-700"
-                >
-                  {tech}
+              ) : (
+                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-950/60 via-neutral-900 to-neutral-950">
+                  {TYPE_ICONS[project.type] ?? <FaGlobe className="text-4xl text-blue-400/60" />}
+                </div>
+              )}
+              {project.type === "video" && (
+                <span className="absolute top-3 right-3 rounded-full bg-blue-600/90 px-2 py-1 text-xs font-semibold text-white">
+                  Demo
                 </span>
-              ))}
-              {/* https://aalgharib.github.io/aalgharibmt.github.io/ */}
-              {/* https://my-portfolio-w6m8.onrender.com/ */}
-              {/* https://windsorrenovationtoperfection.wordpress.com/ */}
-            </motion.div>
-          </div>
+              )}
+            </div>
+
+            {/* Body */}
+            <div className="flex flex-1 flex-col p-6">
+              <h3 className="mb-2 text-base font-semibold text-white">
+                {project.title}
+              </h3>
+              <p className="mb-4 flex-1 text-sm leading-relaxed text-neutral-400">
+                {project.description}
+              </p>
+
+              {/* Tech tags */}
+              <div className="mb-5 flex flex-wrap gap-2">
+                {project.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1
+                               text-xs font-medium text-blue-400"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Link */}
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm font-medium text-blue-400
+                           hover:text-blue-300 transition-colors duration-200 group/link"
+              >
+                {getLinkLabel(project.type)}
+                <span className="translate-x-0 group-hover/link:translate-x-1 transition-transform duration-200">
+                  →
+                </span>
+              </a>
+            </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

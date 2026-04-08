@@ -1,92 +1,98 @@
 import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.png";
-import project4 from "../assets/projects/project-4.png";
+import heroImage from "../assets/hero-image.png";
 
-// export const HERO_CONTENT = `I am a passionate AI full stack developer with a knack for crafting robust and scalable web applications. With 2 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
-export const HERO_CONTENT = `I build and deploy AI-powered, data-driven web applications with a strong focus on clean front-end architecture, real-world usability, and maintainable systems.`;
+export const HERO_CONTENT = `I build AI-powered automation systems and full-stack web applications. Founder of Synosys — delivering intelligent voice agents and intake workflows for healthcare, law, real estate, and consulting.`;
 
-// export const HERO_CONTENT = `I specialize in full-stack development with JavaScript, React, Next.js, and Node.js, and have experience with SQL and Oracle databases.`;
+export const ABOUT_TEXT = `I'm an AI Software Engineer and founder of Synosys, an AI automation agency building intelligent intake and client engagement systems for professional service firms. My work sits at the intersection of full-stack development and applied AI — spanning voice agents, LLM-powered workflows, multilingual interfaces, and production-grade web platforms.
 
-// export const ABOUT_TEXT = `I am a dedicated and versatile AI full stack developer with a passion for creating efficient and user-friendly web applications. With 2 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
-export const ABOUT_TEXT = `I am an AI Full Stack Developer with hands-on experience building and deploying production web applications used by real users. My work spans AI-powered systems, React-based front-end applications, and backend APIs, with a strong emphasis on translating complex logic and data into clear, usable interfaces. I approach development as a problem-solving process—making deliberate trade-offs around performance, maintainability, and user experience. I am comfortable working across the stack when needed, but I place particular value on front-end clarity, data-driven UI, and building systems that hold up under real usage. I enjoy collaborating with others, iterating based on feedback, and continuously improving both my technical skills and the products I build.
-`;
+With hands-on experience across healthcare, law, real estate, and consulting, I focus on real-world outcomes: reducing friction for end-users, automating repetitive processes, and delivering systems that hold up under actual usage. I lead end-to-end — from architecture and backend APIs to front-end polish and deployment.
+
+I stay close to what's emerging in AI tooling and apply it practically, not theoretically.`;
+
 export const EXPERIENCES = [
   {
-    year: "2024 - Present",
-    role: "Website Administrator",
-    company: "Al-Mahdi Centre",
-    description: `Managed domain hosting and previous website migration. Oversaw content assistants and provided technical support. Developed software and designed website elements as needed. Created documentation on website processes and procedures. Collaborated with stakeholders to define project requirements and timelines. Provided technical support and documentation to end-users.`,
-    technologies: ["Javascript", "React.js", "Node.js", "WordPress"],
+    year: "2025 – Present",
+    role: "AI Software Engineer",
+    company: "Synosys",
+    description: `Building AI intake and automation systems for professional service firms across healthcare, law, real estate, and consulting. Developing voice agents, LLM-powered workflows, and client-facing platforms that automate lead capture, intake, and follow-up processes at scale.`,
+    technologies: ["Python", "LangChain", "OpenAI", "React", "Node.js", "Vite"],
   },
   {
-    year: "2023 - 2024",
+    year: "2024 – Present",
+    role: "Website Administrator",
+    company: "Al-Mahdi Centre",
+    description: `Managed domain hosting and website migration. Oversaw content assistants and provided technical support. Developed software and designed website elements. Created documentation on website processes and collaborated with stakeholders to define project requirements and timelines.`,
+    technologies: ["JavaScript", "React.js", "Node.js", "WordPress"],
+  },
+  {
+    year: "2023 – 2024",
     role: "Full Stack Developer",
     company: "Windsor Renovation to Perfection",
     description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
     technologies: ["WordPress", "PHP", "Next.js", "MySQL"],
   },
-  // {
-  //   year: "2022 - 2023",
-  //   role: "Frontend Developer",
-  //   company: "Adobe",
-  //   description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-  //   technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  // },
-  // {
-  //   year: "2020 - 2021",
-  //   role: "Software Engineer",
-  //   company: "Paypal",
-  //   description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-  //   technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  // },
 ];
-{
-  /* https://aalgharib.github.io/aalgharibmt.github.io/ */
-}
-{
-  /* https://my-portfolio-w6m8.onrender.com/ */
-}
-{
-  /* https://windsorrenovationtoperfection.wordpress.com/ */
-}
+
 export const PROJECTS = [
   {
-    title: "Portfolio Website",
+    title: "Voice Agent – Real Estate",
+    image: heroImage,
+    description:
+      "AI-powered voice agent that handles property inquiries, qualifies leads, and books appointments autonomously — built for real estate firms to eliminate manual intake.",
+    technologies: ["Python", "LangChain", "OpenAI", "Voice AI", "Twilio"],
+    link: "https://www.youtube.com/watch?v=WcK0cxCGoDU",
+    type: "video",
+  },
+  {
+    title: "Voice Agent – Healthcare",
+    image: "https://img.youtube.com/vi/XxkupLJ3u24/hqdefault.jpg",
+    description:
+      "AI voice agent for patient intake and appointment scheduling. Automates the front-desk experience for healthcare providers, reducing no-shows and admin overhead.",
+    technologies: ["Python", "LangChain", "OpenAI", "Voice AI"],
+    link: "https://www.youtube.com/watch?v=XxkupLJ3u24",
+    type: "video",
+  },
+  {
+    title: "Synosys Content & Campaign Platform",
+    image: null,
+    description:
+      "Full-stack platform for AI-driven content creation and campaign management. Enables professional service firms to generate, schedule, and publish targeted content at scale.",
+    technologies: ["React", "Node.js", "OpenAI", "Tailwind CSS", "PostgreSQL"],
+    link: "https://platform.synosys.io/",
+    type: "platform",
+  },
+  {
+    title: "Synosys – AI Automation Agency",
+    image: null,
+    description:
+      "Designed, built, and launched the Synosys agency website. Showcases AI automation services for professional service firms with conversion-focused design and clear service positioning.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    link: "https://synosys.io/",
+    type: "website",
+  },
+  {
+    title: "AI Doctor Diagnosis Assistant",
     image: project1,
     description:
-      "A personal portfolio website showcasing projects, skills, and experience. Includes sections for projects, about me, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    link: "https://alialgharibawi.vercel.app/",
+      "Academic AI system designed to assist with medical diagnosis. Uses machine learning and NLP to analyze symptoms and suggest differential diagnoses. Built as part of COMP 385/402.",
+    technologies: ["Python", "Machine Learning", "NLP", "Flask", "scikit-learn"],
+    link: "https://github.com/aalgharib/AI-DOCTOR-DIAGNOSIS-ASSIST-COMP385-402",
+    type: "github",
   },
   {
-    title: "Construction Company Website",
+    title: "Multilingual Chatbot",
     image: project2,
     description:
-      "An official website for a construction company showcasing services, projects, and client testimonials. Features include a project gallery, service descriptions, team member profiles, and contact information.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-    link: "https://windsorrenovationtoperfection.wordpress.com/",
-  },
-  {
-    title: "Dynamic Multiplication Table",
-    image: project3,
-    description:
-      "A web application that generates a dynamic multiplication table based on user input. Features include real-time table generation, customizable styling, and responsive design.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-    link: "https://aalgharib.github.io/aalgharibmt.github.io/",
-  },
-  {
-    title: "Portfolio Website",
-    image: project4,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-    link: "https://my-portfolio-w6m8.onrender.com/",
+      "Cloud ML-powered chatbot supporting multiple languages, built with LangChain and Hugging Face. Features per-session conversation memory, fine-tunable on domain-specific data, with a React frontend and REST API.",
+    technologies: ["Python", "Flask", "LangChain", "Hugging Face", "React", "AWS"],
+    link: "https://github.com/aalgharib/Multilingual-Chatbot-",
+    type: "github",
   },
 ];
 
 export const CONTACT = {
-  address: " London, ON ",
-  phoneNo: "+1 519 991 4046 ",
+  address: "London, ON, Canada",
+  phoneNo: "+1 519 991 4046",
   email: "aalgharibawi@gmail.com",
 };
