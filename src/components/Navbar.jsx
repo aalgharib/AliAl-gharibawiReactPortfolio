@@ -1,5 +1,5 @@
 import logo from "../assets/3.png";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaYoutube, FaFacebook, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const NAV_LINKS = [
@@ -61,6 +61,36 @@ const Navbar = () => {
           className="text-xl text-neutral-400 hover:text-white transition-colors"
         >
           <FaGithub />
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          transition={{ duration: 0.2 }}
+          href="https://www.youtube.com/@alialgharibawi9647"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl text-neutral-400 hover:text-white transition-colors"
+        >
+          <FaYoutube />
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          transition={{ duration: 0.2 }}
+          href="https://www.facebook.com/ali.algharibawi.3"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl text-neutral-400 hover:text-white transition-colors"
+        >
+          <FaFacebook />
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          transition={{ duration: 0.2 }}
+          href="https://www.instagram.com/synosys.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl text-neutral-400 hover:text-white transition-colors"
+        >
+          <FaInstagram />
         </motion.a>
         <motion.a
           whileHover={{ scale: 1.05 }}
